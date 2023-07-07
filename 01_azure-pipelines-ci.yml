@@ -1,8 +1,7 @@
 trigger: 'none' # will disable CI builds entirely
 
-pool: self-hosted-machine
-  #vmImage: 'windows-2019'
-    
+pool: 'self-hosted-machine'
+
 variables:
   BuildConfiguration: release
   
@@ -44,7 +43,7 @@ steps:
     PathtoPublish: $(Build.ArtifactStagingDirectory)
     ArtifactName: DemoApplication
     publishLocation: Container
-    
+
 # - task: AzureResourceManagerTemplateDeployment@3
 #   inputs:
 #     deploymentScope: 'Resource Group'
